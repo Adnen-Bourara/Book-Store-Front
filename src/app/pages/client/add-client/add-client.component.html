@@ -1,0 +1,55 @@
+<div class="col-md-12  " style="width:950px; height: 325px" >
+    <form class="form-group" (ngSubmit)="onAddBook()"  autocomplete="off"   >
+    <nb-card>
+ 
+        <nb-card-body>
+
+
+            <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="CIN">CIN</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="number" class="form-control" nbInput required  [(ngModel)]="client.cin"  placeholder="CIN"   name="CIN"  />
+                </div>
+               </div> 
+
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="Name">Name</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="text" class="form-control" nbInput required  [(ngModel)]="client.nom"  placeholder="Name"   name="Name"  />
+                </div>
+               </div> 
+
+               
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="LastName">LastName</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="text" class="form-control" nbInput required  [(ngModel)]="client.prenom"  placeholder="LastName"   name="LastName"  />
+                </div>
+               </div> 
+    
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="Mail">Mail</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="text" class="form-control" nbInput required  [(ngModel)]="client.mail"  placeholder="Mail"   name="Mail"  />
+                </div>
+               </div> 
+
+
+        </nb-card-body>
+        
+ 
+    </nb-card>
+    <div style="text-align:right;">
+      <button nbButton status="success" type="submit" >Save</button>
+      <button nbButton status="warning" (click)="fermer()" style="margin-left: 30px;">Return</button>
+    </div>
+  </form>
+    </div>

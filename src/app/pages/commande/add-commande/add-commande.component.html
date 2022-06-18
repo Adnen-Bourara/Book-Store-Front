@@ -1,0 +1,64 @@
+<div class="col-md-12  " style="width:950px; height: 325px" >
+    <form class="form-group" (ngSubmit)="onAddBook()"  autocomplete="off"   >
+    <nb-card>
+ 
+        <nb-card-body>
+
+
+            <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="nbAchat">nbAchat</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="number" class="form-control" nbInput required  [(ngModel)]="commande.nbAchat"  placeholder="nbAchat"   name="nbAchat"  />
+                </div>
+               </div> 
+
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="nomClient">nomClient</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="text" class="form-control" nbInput required  [(ngModel)]="commande.nomClient"  placeholder="nomClient"   name="nomClient"  />
+                </div>
+               </div> 
+               
+               
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="Book">Book</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="text" class="form-control" nbInput required  [(ngModel)]="commande.type"  placeholder="Book"   name="adresse"  />
+                </div>
+               </div> 
+
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="adresse">adresse</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="text" class="form-control" nbInput required  [(ngModel)]="commande.adresse"  placeholder="adresse"   name="adresse"  />
+                </div>
+               </div> 
+    
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="montant">montant</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="number" class="form-control" nbInput required  [(ngModel)]="commande.montant"  placeholder="montant"   name="montant"  />
+                </div>
+               </div> 
+
+
+        </nb-card-body>
+        
+ 
+    </nb-card>
+    <div style="text-align:right;">
+      <button nbButton status="success" type="submit" >Save</button>
+      <button nbButton status="warning" (click)="fermer()" style="margin-left: 30px;">Return</button>
+    </div>
+  </form>
+    </div>

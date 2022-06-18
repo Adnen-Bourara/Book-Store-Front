@@ -1,0 +1,55 @@
+<div class="col-md-12  " style="width:950px; height: 325px" >
+    <form class="form-group" (ngSubmit)="onAddBook()"  autocomplete="off"   >
+    <nb-card>
+ 
+        <nb-card-body>
+
+
+            <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="Title">Title</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="text" class="form-control" nbInput required  [(ngModel)]="book.titre"  placeholder="Title"   name="Title"  />
+                </div>
+               </div> 
+
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="Price">Price</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="number" class="form-control" nbInput required  [(ngModel)]="book.prix"  placeholder="Price"   name="Price"  />
+                </div>
+               </div> 
+
+               
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="Stock">Stock</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="number" class="form-control" nbInput required  [(ngModel)]="book.quantiteStock"  placeholder="Stock"   name="Stock"  />
+                </div>
+               </div> 
+    
+               <div  class="row full-name-inputs label nvForm">
+                <div class="input-group col-md-3   input-group-lg">
+                  <label for="Collection">Collection</label>
+                </div>
+                <div    class="input-group col-md-6   input-group-sm">
+                  <input  type="text" class="form-control" nbInput required  [(ngModel)]="book.collection"  placeholder="Collection"   name="Collection"  />
+                </div>
+               </div> 
+
+
+        </nb-card-body>
+        
+ 
+    </nb-card>
+    <div style="text-align:right;">
+      <button nbButton status="success" type="submit" >Save</button>
+      <button nbButton status="warning" (click)="fermer()" style="margin-left: 30px;">Return</button>
+    </div>
+  </form>
+    </div>
